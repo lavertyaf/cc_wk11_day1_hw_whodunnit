@@ -28,6 +28,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
+The murderer is Miss Scarlet as this has been defined and not updated or amended in any way
+
 #### Episode 2
 
 ```js
@@ -46,6 +48,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 
+The murderer is Professor Plum, however we see an error as we are trying to reassign the murderer, which is a const
+
 #### Episode 3
 
 ```js
@@ -63,6 +67,9 @@ const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
 
+The first murderer is Mrs Peacock as let has been used, which allows us to write over the murderer and reassign it to Mrs P
+The second murderer is Prof Plum, as although let has been used, we never call the method declareMurderer, which is when it is reassigned.
+
 #### Episode 4
 
 ```js
@@ -79,6 +86,12 @@ const suspects = declareAllSuspects();
 console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
+
+Suspect 1 is Miss Scarlet
+Suspect 2 is Prof Plum
+Suspect 3 is Colonel Mustard, as we have used let, we can overwrite the original Mrs Peacock
+
+Suspect 3 is Mrs Peacock, as we only overwrite to Col. Mustard inside the method declareAllSuspects and cannot be accessed external to the function
 
 #### Episode 5
 
@@ -101,6 +114,7 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 ```
+The weapon is revolver. Although the weapon is a const and is set to candle stick, we are able to call a function on the scenario which replaces the weapon with a newWeapon, in this case the revolver.
 
 #### Episode 6
 
@@ -125,6 +139,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+The murderer is Mrs White.  It originally starts as Col Mustard, however the plot twist is called, making it Mrs White. Towards the end the changeMurderer function is called, which would change it to Mr Green, except this method also includes the plot twist function which, once again, makes it Mrs White.
 
 #### Episode 7
 
@@ -155,6 +170,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+The murderer is (I thought it would be Miss Scarlet but its Mr Green and I don't know why...)
 
 #### Episode 8
 
@@ -194,6 +210,7 @@ changeScenario();
 const verdict = declareWeapon();
 console.log(verdict);
 ```
+The weapon is candle stick.  plotTwist changes the room to dining room, which changes the murderer to Col Mustard.  The unexpected outcome uses Col Mustard as a variable, this means that the scenario.murderer === murderer and that means the weapon is Candle stick
 
 #### Episode 9
 
@@ -211,6 +228,7 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
+The murderer is (I thought it would be Mrs Peacock but its Prof Plum and I don't know why....)
 
 ### Extensions
 
