@@ -172,6 +172,8 @@ console.log(verdict);
 ```
 The murderer is (I thought it would be Miss Scarlet but its Mr Green and I don't know why...)
 
+changeMurdered changes the global variable, whereas the other changes only change local variables, which has no effect on the overall outcome
+
 #### Episode 8
 
 ```js
@@ -229,6 +231,8 @@ const verdict = declareMurderer();
 console.log(verdict);
 ```
 The murderer is (I thought it would be Mrs Peacock but its Prof Plum and I don't know why....)
+
+the global let murderer = Prof Plum, whereas Mrs P is a new variable that only exists locally and does not impact the original time the murderer is set to Prof Plum.
 
 ### Extensions
 
